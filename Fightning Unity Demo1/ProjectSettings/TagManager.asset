@@ -12,6 +12,7 @@ TagManager:
   - UniPlayer
   - Sword1
   - Key
+  - Zone
   layers:
   - Default
   - TransparentFX

@@ -6,7 +6,8 @@ public class AnimationChanger : MonoBehaviour {
 
 	public Animator anim;
 
-	public int speed = 5;
+	public int speed;
+	public int high;
 
 	public int PlayerATK;
 	GoalScript GS;
@@ -34,6 +35,8 @@ public class AnimationChanger : MonoBehaviour {
 		GS = GameObject.Find ("Goal").GetComponent<GoalScript> ();
 		//Debug.Log (GS.goal);
 		life = true;
+		speed = 8;
+		high = 2;
 	}
 	
 	// Update is called once per frame
@@ -83,7 +86,7 @@ public class AnimationChanger : MonoBehaviour {
 			}
 
 			if (Input.GetKey (KeyCode.Space)) {
-				transform.position += transform.transform.up * speed * Time.deltaTime;
+				transform.position += transform.transform.up * high * Time.deltaTime;
 				anim.SetBool ("jump", true);
 			} else {
 				anim.SetBool ("jump", false);
